@@ -2,12 +2,11 @@
 ### Django Project Setup with API Documentation and Database Configuration
 ### Objective: Set up the Django project with the necessary dependencies, configure the database, and add Swagger for API documentation.
 ```bash
-#### Set up virtual environment
+setting up virtual environment
 python3 -m venv env
 source env/bin/activate
 
-# Install Django and dependencies
-pip install django djangorestframework django-cors-headers drf-yasg mysqlclient django-environ celery
+--- Install Django and dependencies pip install django djangorestframework django-cors-headers drf-yasg mysqlclient django-environ celery ---
 
 --- requirements ---
 
