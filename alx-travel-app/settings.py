@@ -2,17 +2,17 @@
 ### Django Project Setup with API Documentation and Database Configuration
 ### Objective: Set up the Django project with the necessary dependencies, configure the database, and add Swagger for API documentation.
 ## Settings
-### import os
+### ```python
+import os
 import environ
 from pathlib import Path
 
-# Initialise environment variables
+# Env setup
 env = environ.Env()
 environ.Env.read_env()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-SECRET_KEY = env("SECRET_KEY")
+SECRET_KEY = env('SECRET_KEY')
 DEBUG = True
 ALLOWED_HOSTS = []
 
@@ -40,8 +40,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'alx_travel_app.urls'
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -49,8 +47,11 @@ DATABASES = {
         'USER': env('DB_USER'),
         'PASSWORD': env('DB_PASSWORD'),
         'HOST': env('DB_HOST'),
-        'PORT': env('DB_PORT', default='3306'),
+        'PORT': env('DB_PORT'),
     }
 }
 
 CORS_ALLOW_ALL_ORIGINS = True
+```
+
+---
