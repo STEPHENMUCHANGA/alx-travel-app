@@ -9,7 +9,7 @@
 #### django-environ
 #### celery
 
-# ===================== settings.py (partial) =====================
+ settings.py 
 #### import os
 #### import environ
 #### from pathlib import Path
