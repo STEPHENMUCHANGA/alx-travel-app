@@ -24,3 +24,10 @@ urlpatterns = [
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
 
+## .env files 
+SECRET_KEY='your-secret-key'
+DB_NAME='alx_db'
+DB_USER='root'
+DB_PASSWORD='password123'
+DB_HOST='localhost'
+DB_PORT='3306'
