@@ -2,6 +2,7 @@
 ### Django Project Setup with API Documentation and Database Configuration
 ### Objective: Set up the Django project with the necessary dependencies, configure the database, and add Swagger for API documentation.
 ## urls
+```python
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import permissions
@@ -12,7 +13,7 @@ schema_view = get_schema_view(
     openapi.Info(
         title="ALX Travel App API",
         default_version='v1',
-        description="API documentation for the ALX Travel App",
+        description="API documentation for ALX Travel App",
     ),
     public=True,
     permission_classes=[permissions.AllowAny],
@@ -23,11 +24,6 @@ urlpatterns = [
     path('api/', include('listings.urls')),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
+```
 
-## .env files 
-SECRET_KEY='your-secret-key'
-DB_NAME='alx_db'
-DB_USER='root'
-DB_PASSWORD='password123'
-DB_HOST='localhost'
-DB_PORT='3306'
+---
