@@ -1,1 +1,20 @@
+```python
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
+class HelloWorld(APIView):
+    def get(self, request):
+        return Response({"message": "Welcome to ALX Travel App"})
+```
+
+`listings/urls.py`
+```python
+from django.urls import path
+from .views import HelloWorld
+
+urlpatterns = [
+    path('hello/', HelloWorld.as_view(), name='hello'),
+]
+```
+
+---
